@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">KotlinApp-Profile-07</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
 </resources>
