@@ -2,7 +2,9 @@
 <resources>
     <dimen name="common_padding_default">16dp</dimen>
     <dimen name="profile_image_size_large">128dp</dimen>
-    <dimen name="profile_corner_radius_large">128dp</dimen>
+    <dimen name="profile_corner_radius_large">64dp</dimen>
     <dimen name="common_padding_min">8dp</dimen>
     <dimen name="profile_text_size_large">24sp</dimen>
+    <dimen name="profile_text_size_middle">18sp</dimen>
+    <dimen name="common_padding_large">32dp</dimen>
 </resources>

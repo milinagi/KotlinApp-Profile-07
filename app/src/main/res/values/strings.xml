@@ -2,4 +2,10 @@
     <string name="app_name">KotlinApp-Profile-07</string>
     <string name="hint_name">Name</string>
     <string name="hint_email">Email</string>
+    <string name="hint_website">Website</string>
+    <string name="hint_phone">Phone</string>
+    <string name="hint_location">Location</string>
+    <string name="main_show_map">See on the map</string>
+    <string name="hint_enable_location">Enable location</string>
+    <string name="profile">Profile</string>
 </resources>

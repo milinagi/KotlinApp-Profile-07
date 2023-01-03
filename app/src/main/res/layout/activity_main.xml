@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="@dimen/common_padding_default"
+        android:paddingBottom="@dimen/common_padding_default"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
@@ -26,7 +27,8 @@
                 android:layout_width="@dimen/profile_image_size_large"
                 android:layout_height="@dimen/profile_image_size_large"
                 android:src="@drawable/profile_me"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/profile" />
 
         </androidx.cardview.widget.CardView>
 
@@ -42,7 +44,6 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/profile_text_size_large"
             android:textColor="@color/black"
-            android:textStyle="italic"
             tools:text="Jorge Ruiz Cabrera"/>
 
         <TextView
@@ -59,6 +60,57 @@
             android:textColor="@color/black"
             android:textStyle="italic"
             tools:text="jorgercdeveloper@gmail.com"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:text="@string/hint_website"/>
+
+        <TextView
+            android:id="@+id/tvWebsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            tools:text="https://mnf.red/jorgeruizcabrera/timeline"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:text="@string/hint_phone"/>
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            tools:text="+34 617 909 035"
+            android:textSize="@dimen/profile_text_size_middle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:text="@string/hint_location"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/main_show_map"
+            android:textStyle="bold"
+            android:textSize="@dimen/profile_text_size_middle"
+            android:drawableEnd="@drawable/ic_map"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_large"
+            android:text="@string/hint_enable_location"
+            android:drawableStart="@drawable/ic_settings"/>
 
 
     </LinearLayout>
