@@ -8,4 +8,6 @@
     <string name="main_show_map">See on the map</string>
     <string name="hint_enable_location">Enable location</string>
     <string name="profile">Profile</string>
+    <string name="edit_title">Edit profile</string>
+    <string name="edit_main_title">Jorge Ruiz Cabrera Profile</string>
 </resources>
