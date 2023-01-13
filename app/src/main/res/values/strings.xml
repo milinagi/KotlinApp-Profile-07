@@ -10,4 +10,6 @@
     <string name="profile">Profile</string>
     <string name="edit_title">Edit profile</string>
     <string name="edit_main_title">Jorge Ruiz Cabrera Profile</string>
+    <string name="hint_latitude">Latitude</string>
+    <string name="hint_longitude">Longitude</string>
 </resources>
