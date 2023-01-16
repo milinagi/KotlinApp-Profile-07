@@ -28,7 +28,7 @@
                 android:layout_height="@dimen/profile_image_size_large"
                 android:src="@drawable/profile_me"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/profile" />
+                android:contentDescription="@string/main_profile" />
 
         </androidx.cardview.widget.CardView>
 
@@ -59,6 +59,8 @@
             android:textSize="@dimen/profile_text_size_large"
             android:textColor="@color/black"
             android:textStyle="italic"
+            android:autoLink="email"
+            android:textColorLink="@color/blue_700"
             tools:text="jorgercdeveloper@gmail.com"/>
 
         <TextView
@@ -72,6 +74,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
+            android:autoLink="web"
+            android:textColorLink="@color/black"
+            android:textStyle="bold"
             tools:text="https://mnf.red/jorgeruizcabrera/timeline"/>
 
         <TextView

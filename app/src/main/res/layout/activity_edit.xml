@@ -32,7 +32,7 @@
                     android:layout_height="match_parent"
                     android:src="@mipmap/ic_launcher"
                     android:scaleType="centerCrop"
-                    android:contentDescription="@string/profile" />
+                    android:contentDescription="@string/main_profile" />
 
             </androidx.cardview.widget.CardView>
 
@@ -41,7 +41,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_image_search"
-                android:background="?selectableItemBackground" />
+                android:background="?selectableItemBackground"
+                android:contentDescription="@string/btn_profile_image"
+                tools:ignore="HardcodedText" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -99,7 +101,9 @@
                 android:id="@+id/etPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="phone"/>
+                android:inputType="phone"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@id/etLat"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
