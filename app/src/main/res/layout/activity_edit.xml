@@ -27,7 +27,7 @@
                 app:cardElevation="@dimen/common_padding_none">
 
                 <ImageView
-                    android:id="@+id/imageProfile"
+                    android:id="@+id/imgProfile"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@mipmap/ic_launcher"

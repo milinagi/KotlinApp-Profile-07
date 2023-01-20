@@ -24,4 +24,7 @@
     <string name="key_phone">k_phone</string>
     <string name="key_latitude">k_lat</string>
     <string name="key_longitude">k_long</string>
+    <string name="key_image">k_image</string>
+
+    <string name="profile_error_no_resolve">No compatible app found</string>
 </resources>

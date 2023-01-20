@@ -1,6 +1,7 @@
 package com.app.kotlinapp_profile_07
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -10,6 +11,8 @@ import com.app.kotlinapp_profile_07.databinding.ActivityEditBinding
 class EditActivity : AppCompatActivity() {
 
     private  lateinit var binding: ActivityEditBinding
+
+    private var imgUri: Uri? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityEditBinding.inflate(layoutInflater)
@@ -20,6 +23,8 @@ class EditActivity : AppCompatActivity() {
         with(binding) {
             intent.extras?.let {
 
+                imgUri = Uri.parse(it.getString(getString(R.string.key_image)))
+                updateImage()
                 etName.setText(it.getString(getString(R.string.key_name)))
                 etEmail.setText(it.getString(getString(R.string.key_email)))
                 etWebsite.setText(it.getString(getString(R.string.key_website)))
@@ -46,6 +51,14 @@ class EditActivity : AppCompatActivity() {
             etLong.setOnFocusChangeListener { v, hasFocus ->
                 if (hasFocus) { etLong.text?.let { etLong.setSelection(it.length) } }
             }
+
+            btnSelectPhoto.setOnClickListener {
+                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+                    addCategory(Intent.CATEGORY_OPENABLE)
+                    type = "image/jpeg"
+                }
+                startActivityForResult(intent, RC_GALLERY)
+            }
         }
 
     }
@@ -60,20 +73,39 @@ class EditActivity : AppCompatActivity() {
             android.R.id.home -> onBackPressed()
             R.id.action_save -> sendData()
         }
-//        if (item.itemId == R.id.action_save) {
-//            sendData()
-//        } else if (item.itemId == android.R.id.home) {
-//            onBackPressed()
-//        }
         return super.onOptionsItemSelected(item)
     }
 
-    fun sendData() {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (resultCode == RESULT_OK) {
+            if (requestCode == RC_GALLERY) {
+                imgUri = data?.data
+
+                imgUri?.let {
+                    val contentResolver = applicationContext.contentResolver
+                    val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or
+                            Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+                    contentResolver.takePersistableUriPermission(it, takeFlags)
+
+                    updateImage()
+                }
+            }
+        }
+    }
+
+    private fun updateImage() {
+        binding.imgProfile.setImageURI(imgUri)
+    }
+
+    private fun sendData() {
         val intent = Intent()
 
         with(binding) {
 
             intent.apply {
+                putExtra(getString(R.string.key_image), imgUri.toString())
                 putExtra(getString(R.string.key_name), etName.text.toString())
                 putExtra(getString(R.string.key_email), etEmail.text.toString())
                 putExtra(getString(R.string.key_website), etWebsite.text.toString())
@@ -82,11 +114,11 @@ class EditActivity : AppCompatActivity() {
                 putExtra(getString(R.string.key_longitude), etLong.text.toString().toDouble())
             }
         }
-
-//        intent.putExtra(getString(R.string.key_name), binding.etName.text.toString())
-
-
         setResult(RESULT_OK, intent)
         finish()
+    }
+
+    companion object {
+        private const val RC_GALLERY = 22
     }
 }

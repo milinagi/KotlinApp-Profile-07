@@ -23,7 +23,7 @@
             app:cardElevation="@dimen/common_padding_min">
 
             <ImageView
-                android:id="@+id/imageProfile"
+                android:id="@+id/imgProfile"
                 android:layout_width="@dimen/profile_image_size_large"
                 android:layout_height="@dimen/profile_image_size_large"
                 android:src="@drawable/profile_me"
@@ -61,6 +61,7 @@
             android:textStyle="italic"
             android:autoLink="email"
             android:textColorLink="@color/blue_700"
+            android:linksClickable="false"
             tools:text="jorgercdeveloper@gmail.com"/>
 
         <TextView
@@ -76,6 +77,7 @@
             android:textColor="@color/black"
             android:autoLink="web"
             android:textColorLink="@color/black"
+            android:linksClickable="false"
             android:textStyle="bold"
             tools:text="https://mnf.red/jorgeruizcabrera/timeline"/>
 
