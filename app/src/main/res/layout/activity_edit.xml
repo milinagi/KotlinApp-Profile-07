@@ -111,7 +111,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginHorizontal="@dimen/common_padding_default"
-            android:layout_marginTop="@dimen/common_padding_default">
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:baselineAligned="false">
 
 
             <com.google.android.material.textfield.TextInputLayout

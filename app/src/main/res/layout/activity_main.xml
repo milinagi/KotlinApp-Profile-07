@@ -24,9 +24,9 @@
 
             <ImageView
                 android:id="@+id/imgProfile"
-                android:layout_width="@dimen/profile_image_size_large"
-                android:layout_height="@dimen/profile_image_size_large"
-                android:src="@drawable/profile_me"
+                android:layout_width="@dimen/profile_image_size_medium"
+                android:layout_height="@dimen/profile_image_size_medium"
+                android:src="@drawable/curso_android_ant"
                 android:scaleType="centerCrop"
                 android:contentDescription="@string/main_profile" />
 

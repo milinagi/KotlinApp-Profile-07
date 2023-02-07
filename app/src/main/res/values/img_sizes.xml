@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sizes">
+        <item>@string/preferences_img_size_small</item>
+        <item>@string/preferences_img_size_medium</item>
+        <item>@string/preferences_img_size_large</item>
+    </string-array>
+
+    <string-array name="sizes_values">
+        <item>@string/preferences_key_img_size_small</item>
+        <item>@string/preferences_key_img_size_medium</item>
+        <item>@string/preferences_key_img_size_large</item>
+    </string-array>
+
+</resources>

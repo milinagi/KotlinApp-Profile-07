@@ -4,22 +4,28 @@
 
     <queries>
         <intent>
-            <action android:name="android.intent.action.DIAL"/>
+            <action android:name="android.intent.action.DIAL" />
         </intent>
-
         <intent>
-            <action android:name="android.intent.action.VIEW"/>
-            <data android:scheme="https"/>
-            <category android:name="android.intent.category.BROWSABLE"/>
+            <action android:name="android.intent.action.CALL" />
         </intent>
-
         <intent>
-            <action android:name="android.intent.action.SENDTO"/>
-            <data android:scheme="*"/>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:scheme="https" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+
+            <data android:scheme="*" />
         </intent>
 
-   <package android:name="com.google.android.apps.maps"/>
+        <package android:name="com.google.android.apps.maps" />
     </queries>
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -32,17 +38,20 @@
         android:theme="@style/Theme.KotlinAppProfile07"
         tools:targetApi="31">
         <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditActivity"
-            android:label="@string/edit_title"
-            android:exported="false">
+            android:exported="false"
+            android:label="@string/edit_title">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/edit_main_title"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/edit_main_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

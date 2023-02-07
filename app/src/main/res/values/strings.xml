@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">KotlinApp-Profile-07</string>
 
     <string name="hint_name">Name</string>
@@ -27,4 +27,27 @@
     <string name="key_image">k_image</string>
 
     <string name="profile_error_no_resolve">No compatible app found</string>
+    <string name="settings_tittle">Settings</string>
+    <string name="preferences_touch_title">Touch</string>
+    <string name="preferences_enable_clicks">Enable clicks</string>
+    <string name="preferences_key_enable_clicks">pref_enable_clicks</string>
+    <string name="preferences_data_title">Data</string>
+    <string name="preferences_delete_data">Delete user data</string>
+    <string name="preferences_key_delete_data">pref_delete_data</string>
+    <string name="preferences_restore_data">Restore Data and Settings</string>
+    <string name="preferences_key_restore_data">pref_restore_data</string>
+    <string name="preferences_ui_title">Interface</string>
+    <string name="preferences_restore_setting">Restore Settings</string>
+    <string name="preferences_key_restore_setting">pref_restore_settings</string>
+
+    <string name="preferences_img_size_small">Small</string>
+    <string name="preferences_img_size_medium">Medium</string>
+    <string name="preferences_img_size_large">Large</string>
+    <string name="preferences_key_img_size_small">pref_small</string>
+    <string name="preferences_key_img_size_medium">pref_medium</string>
+    <string name="preferences_key_img_size_large">pref_large</string>
+
+    <string name="preferences_ui_img_size">Image size</string>
+    <string name="preferences_key_ui_img_size">pref_ui_img_size</string>
+
 </resources>
